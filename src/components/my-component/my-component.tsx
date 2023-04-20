@@ -1,9 +1,9 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, Prop, h } from "@stencil/core";
+import { format } from "../../utils/utils";
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: "my-component",
+  styleUrl: "my-component.css",
   shadow: true,
 })
 export class MyComponent {
@@ -27,9 +27,11 @@ export class MyComponent {
   }
 
   render() {
-    return <div class="bg-indigo-500 p-6 rounded-md flex justify-center">
-      <div>Hello, World! I'm {this.getText()}</div>
-    </div>;
+    return (
+      <div class="bg-indigo-500 p-6 rounded-md flex justify-center">
+        <div>Hello, World! I'm {this.getText()}</div>
+      </div>
+    );
     // return <div>Hello, World! I'm {this.getText()}</div>;
   }
 }

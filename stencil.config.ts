@@ -1,25 +1,22 @@
-import { Config } from '@stencil/core';
-import tailwind, { tailwindHMR } from 'stencil-tailwind-plugin';
+import { Config } from "@stencil/core";
+import tailwind, { tailwindHMR } from "stencil-tailwind-plugin";
 
 export const config: Config = {
-  namespace: 'stencil-tailwind-template',
-  plugins: [
-    tailwind(),
-    tailwindHMR(),
-  ],
+  namespace: "stencil-tailwind-template",
+  plugins: [tailwind(), tailwindHMR()],
   outputTargets: [
     {
-      type: 'dist',
-      esmLoaderPath: '../loader',
+      type: "dist",
+      esmLoaderPath: "../loader",
     },
     {
-      type: 'dist-custom-elements',
+      type: "dist-custom-elements",
     },
     {
-      type: 'docs-readme',
+      type: "docs-readme",
     },
     {
-      type: 'www',
+      type: "www",
       serviceWorker: null, // disable service workers
     },
   ],
